@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="loadDashboard()">
+  <div class="card">
+    <h1>Prediction Dashboard</h1>
+
+    <p><strong>Average Meals:</strong> <span id="avgMeals">0</span></p>
+    <p><strong>Tomorrow Prediction:</strong> <span id="prediction">0</span></p>
+    <p><strong>Surplus Meals:</strong> <span id="surplus">0</span></p>
+
+    <div id="alertStatus" class="alert-status"></div>
+    <button id="alertBtn" onclick="sendAlert()">Send NGO Alert</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

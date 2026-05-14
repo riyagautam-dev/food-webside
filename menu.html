@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meal Entry</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>Daily Meal Entry</h1>
+    <p class="subtitle">Standard Meal: 1 meal = 3 rotis + 1 sabzi + optional rice/dal</p>
+
+    <label>Menu Item</label>
+    <input type="text" id="menuItem" placeholder="What was prepared today? (e.g. Roti + Sabzi)" />
+
+    <label>Special Dish (Optional)</label>
+    <input type="text" id="specialDish" placeholder="Enter special dish name" />
+
+    <label>Meals Prepared</label>
+    <input type="number" id="prepared" placeholder="Enter meals prepared" />
+
+    <label>Students Served / Meals Consumed</label>
+    <input type="number" id="served" placeholder="Enter students served" />
+<button type="button" onclick="goToDashboard()">Submit</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+menu.html

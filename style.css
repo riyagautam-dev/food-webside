@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb, #8fd3f4, #84fab0);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  min-height: 100vh;
+  padding: 40px 20px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.card {
+  width: 520px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 50px 45px;
+  border-radius: 30px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.4);
+  transform: translateY(0);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 35px 70px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 36px;
+  color: #1f2937;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #4b5563;
+  margin-bottom: 35px;
+  font-size: 16px;
+}
+
+.hero-banner {
+  width: 100%;
+  height: 160px;
+  border-radius: 22px;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+  background-size: 200% 200%;
+  animation: bannerShift 6s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+@keyframes bannerShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+input,
+select {
+  width: 100%;
+  padding: 16px 20px;
+  margin: 14px 0;
+  border: 2px solid rgba(255,255,255,0.6);
+  border-radius: 16px;
+  font-size: 16px;
+  background: rgba(255,255,255,0.5);
+  color: #1f2937;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #8b5cf6;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+  transform: scale(1.02);
+}
+
+input::placeholder {
+  color: #6b7280;
+}
+
+button {
+  width: 100%;
+  padding: 18px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+  background-size: 200% 200%;
+  animation: bannerShift 6s ease infinite;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.35);
+}
+
+button:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(102, 126, 234, 0.45);
+}
+
+button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+p {
+  background: #f8fafc;
+  padding: 12px;
+  border-radius: 12px;
+  margin: 10px 0;
+}
+
+.alert-status {
+  padding: 14px 16px;
+  border-radius: 12px;
+  margin: 15px 0;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.alert-auto {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.alert-manual {
+  background: #ffedd5;
+  color: #9a3412;
+  border: 1px solid #fed7aa;
+}
+
+/* Floating decoration shapes */
+.shape {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.5;
+  z-index: -1;
+  animation: float 8s ease-in-out infinite;
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  background: #ff9a9e;
+  top: -100px;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.shape-2 {
+  width: 250px;
+  height: 250px;
+  background: #a18cd1;
+  bottom: -80px;
+  right: -80px;
+  animation-delay: 2s;
+}
+
+.shape-3 {
+  width: 200px;
+  height: 200px;
+  background: #84fab0;
+  top: 50%;
+  left: 80%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(30px, -30px); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+    padding: 35px 25px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+}
